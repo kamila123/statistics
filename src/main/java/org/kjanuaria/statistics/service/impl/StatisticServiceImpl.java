@@ -24,21 +24,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class StatisticServiceImpl implements StatisticService {
 
-	// Lock for ADD / REMOVE
 	private Object lock = new Object();
 
-	// Memory Complexity: O(${windowInMs} / 1000 +
-	// ${removeExpiredStatisticsInMs} / 1000) -> O(1)
 	private Map<Long, Statistic> statisticHistory;
-
-	// Memory Complexity: O(${windowInMs} / 1000 +
-	// ${removeExpiredStatisticsInMs} / 1000) -> O(1)
 
 	private Stack<Long> statisticTimestamps;
 
 	private Statistic statistic;
 
-	// @Value("60000")
 	private Long windowInMs = (long) 6000;
 
 	public StatisticServiceImpl() {
