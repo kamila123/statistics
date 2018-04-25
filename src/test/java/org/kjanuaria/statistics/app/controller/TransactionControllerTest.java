@@ -48,12 +48,6 @@ public class TransactionControllerTest {
 
 		this.mockMvc.perform(builder).andExpect(MockMvcResultMatchers.status().isCreated());
 
-		// mockMvc.perform(post(createUrl).contentType(MediaType.APPLICATION_JSON_UTF8).content(createUserInJson(amount,
-		// timestamp)).andExpect(status().isOk())
-		//
-		// .andExpect(jsonPath("$.amount",
-		// is(299.00))).andExpect(jsonPath("$.timestamp", is("1524658310000")));
-
 	}
 
 	private TransactionJson createTransactionJson(Double amount, Long timestamp) {

@@ -39,7 +39,7 @@ public class StatisticServiceImpl implements StatisticService {
 	private Statistic statistic;
 
 	// @Value("60000")
-	private Long windowInMs = (long) 12000;
+	private Long windowInMs = (long) 6000;
 
 	public StatisticServiceImpl() {
 		this.statisticHistory = new ConcurrentHashMap<Long, Statistic>();
